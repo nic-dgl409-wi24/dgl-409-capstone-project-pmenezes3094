@@ -1,0 +1,25 @@
+main {
+    height: calc(100vh - $size-header);
+    background-image: url(../assets/images/background.jpg);
+    @include background-image;
+    display: flex;
+    align-items: center;
+
+    .card-first-time {
+        @include card;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .content-first-time {
+            max-width: 390px;
+            text-align: center;
+            padding: $spacing-xxl 0;
+
+            h2 {
+                font-family: $font-family-tertiary;
+                font-size: $font-size-7;
+            }
+        }
+    }
+}

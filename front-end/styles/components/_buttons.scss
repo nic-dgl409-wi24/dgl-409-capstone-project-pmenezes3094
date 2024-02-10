@@ -9,3 +9,12 @@
         object-fit: contain;
     }
 }
+
+.button-primary {
+    height: 50px;
+    max-width: 228px;
+    border: none;
+    border-radius: $corner-radius;
+    background-color: $color-secondary-dark-version;
+    color: $color-primary-light-version;
+}

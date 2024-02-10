@@ -3,11 +3,9 @@
     column-gap: $gap;
 
     .card {
-        width: 100%;
         margin-bottom: $gap;
         break-inside: avoid;
-        box-shadow: $card-shadow;
-        border-radius: $corner-radius;
+        @include card;
 
         @include position-bottom-left;
 
