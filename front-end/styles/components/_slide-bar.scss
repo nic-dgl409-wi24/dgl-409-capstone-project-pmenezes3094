@@ -1,0 +1,29 @@
+.slide-bar {
+    @include card;
+    height: 200px;
+    display: flex;
+    align-items: center;
+
+    display: none; /* Initially hide the content */
+    overflow: hidden; /* Hide overflow content */
+    transition: max-height 0.5s ease; /* Add smooth transition effect */
+
+    .container-slide-bar {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+
+        form label {
+            font-size: $font-size-6;
+        }
+
+        .formfield {
+            @include formfield;
+        }
+    }
+
+}
+
+.slide-bar.active {
+    display: block; /* Show the content */
+}
