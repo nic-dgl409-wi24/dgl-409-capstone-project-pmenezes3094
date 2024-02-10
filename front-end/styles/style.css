@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Sacramento&display=swap");
-h1, h2, h3, h4, h5, h6 {
-  color: "#333333";
-}
-
 h1 {
   font-family: "Sacramento", cursive;
-  font-size: "24px";
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 24px;
+}
+h2 span {
+  font-size: 24px;
 }
 
 .emphasize {
@@ -51,8 +54,8 @@ h1 {
   width: 100%;
   font-family: "Nunito", sans-serif;
   font-weight: 400;
-  font-size: "16px";
-  color: "#333333";
+  font-size: 16px;
+  color: #333333;
 }
 * .container {
   margin: 0 auto;
@@ -101,14 +104,26 @@ main .grid-container {
   -moz-column-gap: 24px;
        column-gap: 24px;
 }
-main .grid-container .grid-item {
+main .grid-container .card {
   width: 100%;
   margin-bottom: 24px;
   -moz-column-break-inside: avoid;
        break-inside: avoid;
-  background-color: #ffffff;
   box-shadow: 0px 4px 100px rgba(201, 201, 201, 0.5);
   border-radius: 10px;
+}
+main .grid-container .card .card-content {
+  transition: transform 0.3s ease; /* Transition for smooth sliding effect */
+}
+main .grid-container .card .slide-button {
+  opacity: 0; /* Initially hide the button */
+  transition: opacity 0.3s ease; /* Transition for smooth opacity change */
+}
+main .grid-container .card:hover .card-content {
+  transform: translateX(-20px); /* Slide content to the left on hover */
+}
+main .grid-container .card:hover .slide-button {
+  opacity: 1; /* Show the button on hover */
 }
 @media (max-width: 768px) {
   main .grid-container {

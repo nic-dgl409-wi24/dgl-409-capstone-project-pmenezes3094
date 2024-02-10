@@ -4,7 +4,7 @@ header {
     top: 0;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #333333; //use variables
+    border-bottom: 1px solid $color-primary-dark-version;
 
     .nav-bar {
         display: flex;
@@ -19,8 +19,7 @@ header {
             button {
                 width: 30px;
                 height: 30px;
-                border: none;
-                background-color: transparent;
+                @include transparent-background;
 
                 img {
                     width: 100%;
@@ -43,13 +42,31 @@ main {
         columns: 4;
         column-gap: $gap;
 
-        .grid-item {
+        .card {
             width: 100%;
             margin-bottom: $gap;
             break-inside: avoid;
-            background-color: #ffffff;
             box-shadow: $card-shadow;
             border-radius: $corner-radius;
+              
+                .card-content {
+                  transition: transform 0.3s ease; /* Transition for smooth sliding effect */
+                }
+              
+                .slide-button {
+                  opacity: 0; /* Initially hide the button */
+                  transition: opacity 0.3s ease; /* Transition for smooth opacity change */
+                }
+              
+                &:hover {
+                  .card-content {
+                    transform: translateX(-20px); /* Slide content to the left on hover */
+                  }
+              
+                  .slide-button {
+                    opacity: 1; /* Show the button on hover */
+                  }
+                }
         }
     }
 

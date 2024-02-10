@@ -7,13 +7,13 @@ $font-family-secondary:'';
 $font-family-tertiary: 'Sacramento', cursive;
 
 //Font-size
-$font-size-1: '12px';
-$font-size-2: '14px';
-$font-size-3: '16px';
-$font-size-4: '20px';
-$font-size-5: '24px';
-$font-size-6: '30px';
-$font-size-7: '56px';
+$font-size-1: 12px;
+$font-size-2: 14px;
+$font-size-3: 16px;
+$font-size-4: 20px;
+$font-size-5: 24px;
+$font-size-6: 30px;
+$font-size-7: 56px;
 
 //font-weight
 $font-light: 200;
@@ -22,15 +22,17 @@ $font-medium: 600;
 $font-bold: 700;
 $font-black: 900;
 
-//font-color
-h1, h2, h3, h4, h5, h6 {
-    color: $color-primary-dark-version;
-}
-
 //font-description
 h1 {
     font-family: $font-family-tertiary;
     font-size: $font-size-5;
+}
+
+h2 {
+    font-size: $font-size-5;
+    span {
+        font-size: $font-size-5;
+    }
 }
 
 .emphasize {
