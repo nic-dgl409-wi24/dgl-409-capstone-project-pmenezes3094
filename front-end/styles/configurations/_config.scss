@@ -1,0 +1,20 @@
+* {
+    //page-setup
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+
+    //font
+    font-family: $font-family-primary;
+    font-weight: $font-regular;
+    font-size: $font-size-3;
+    color: $color-primary-dark-version;
+
+    //page-setup
+    .container {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 984px;
+    }
+}
