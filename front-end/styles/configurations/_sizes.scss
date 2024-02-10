@@ -1,0 +1,42 @@
+//card-sizes
+
+$size-card-xxs: 57px;
+$size-card-xs: 114px;
+$size-card-s: 171px;
+$size-card-r: 228px;
+$size-card-m: 285px;
+$size-card-l: 342px;
+$size-card-xl: 399px;
+$size-card-xxl: 456px;
+
+.card-xxs{
+    height: $size-card-xxs;
+}
+
+.card-xs{
+    height: $size-card-xs;
+}
+
+.card-s{
+    height: $size-card-s;
+}
+
+.card-r{
+    height: $size-card-r;
+}
+
+.card-m{
+    height: $size-card-m;
+}
+
+.card-l{
+    height: $size-card-l;
+}
+
+.card-xl{
+    height: $size-card-xl;
+}
+
+.card-xxl{
+    height: $size-card-xxl;
+}

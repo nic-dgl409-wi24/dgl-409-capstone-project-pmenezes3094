@@ -22,10 +22,19 @@ $font-medium: 600;
 $font-bold: 700;
 $font-black: 900;
 
+//font-color
+h1, h2, h3, h4, h5, h6 {
+    color: $color-primary-dark-version;
+}
+
 //font-description
 h1 {
     font-family: $font-family-tertiary;
     font-size: $font-size-5;
+}
+
+.emphasize {
+    font-weight: $font-black;
 }
 
 

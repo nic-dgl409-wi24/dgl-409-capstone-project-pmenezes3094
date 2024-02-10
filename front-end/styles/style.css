@@ -1,7 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Sacramento&display=swap");
+h1, h2, h3, h4, h5, h6 {
+  color: "#333333";
+}
+
 h1 {
   font-family: "Sacramento", cursive;
   font-size: "24px";
+}
+
+.emphasize {
+  font-weight: 900;
+}
+
+.card-xxs {
+  height: 57px;
+}
+
+.card-xs {
+  height: 114px;
+}
+
+.card-s {
+  height: 171px;
+}
+
+.card-r {
+  height: 228px;
+}
+
+.card-m {
+  height: 285px;
+}
+
+.card-l {
+  height: 342px;
+}
+
+.card-xl {
+  height: 399px;
+}
+
+.card-xxl {
+  height: 456px;
 }
 
 * {
@@ -51,6 +91,10 @@ header .nav-bar nav button img {
      object-fit: contain;
 }
 
+main .greeting {
+  text-align: center;
+  padding: 30px 0 30px 0;
+}
 main .grid-container {
   -moz-columns: 4;
        columns: 4;
@@ -66,33 +110,15 @@ main .grid-container .grid-item {
   box-shadow: 0px 4px 100px rgba(201, 201, 201, 0.5);
   border-radius: 10px;
 }
-main .grid-container .grid-item-1 {
-  height: 10px;
-}
-main .grid-container .grid-item-2 {
-  height: 100px;
-}
-main .grid-container .grid-item-3 {
-  height: 50px;
-}
-main .grid-container .grid-item-4 {
-  height: 10px;
-}
-main .grid-container .grid-item-5 {
-  height: 200px;
-}
-main .grid-container .grid-item-6 {
-  height: 150px;
-}
 @media (max-width: 768px) {
-  main .container.grid-container {
+  main .grid-container {
     width: 100%;
     -moz-columns: 3;
          columns: 3;
   }
 }
 @media (max-width: 480px) {
-  main .container.grid-container {
+  main .grid-container {
     width: 100%;
     -moz-columns: 1;
          columns: 1;

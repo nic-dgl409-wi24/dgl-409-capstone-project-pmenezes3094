@@ -34,6 +34,11 @@ header {
 }
 
 main {
+    .greeting{
+        text-align: center;
+        padding: $spacing-m 0 $spacing-m 0;
+    }
+
     .grid-container {
         columns: 4;
         column-gap: $gap;
@@ -46,46 +51,19 @@ main {
             box-shadow: $card-shadow;
             border-radius: $corner-radius;
         }
-
-        .grid-item-1 {
-            height: 10px;
-
-        }
-
-        .grid-item-2 {
-            height: 100px;
-        }
-
-        .grid-item-3 {
-            height: 50px;
-        }
-
-        .grid-item-4 {
-            height: 10px;
-        }
-
-        .grid-item-5 {
-            height: 200px;
-        }
-
-        .grid-item-6 {
-            height: 150px;
-        }
     }
 
     @media (max-width: 768px) {
-        .container.grid-container {
+        .grid-container {
             width: 100%;
             columns: 3;
         }
     }
 
     @media (max-width: 480px) {
-        .container.grid-container {
+        .grid-container {
             width: 100%;
             columns: 1;
         }
     }
-
-
 }
