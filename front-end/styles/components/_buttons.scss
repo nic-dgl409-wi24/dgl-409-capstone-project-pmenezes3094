@@ -1,0 +1,11 @@
+.button-icon {
+    width: 30px;
+    height: 30px;
+    @include background-transparent;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}

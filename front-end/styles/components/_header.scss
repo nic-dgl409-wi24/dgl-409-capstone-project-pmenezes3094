@@ -1,0 +1,20 @@
+header {
+    height: 80px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $color-primary-dark-version;
+
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        nav {
+            display: flex;
+            gap: $gap;
+            justify-content: flex-end;
+        }
+    }
+}

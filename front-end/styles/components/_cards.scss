@@ -1,0 +1,41 @@
+.card-container {
+    columns: 4;
+    column-gap: $gap;
+
+    .card {
+        width: 100%;
+        margin-bottom: $gap;
+        break-inside: avoid;
+        box-shadow: $card-shadow;
+        border-radius: $corner-radius;
+
+        @include position-bottom-left;
+
+        .card-content {
+            @include position-bottom-left;
+            gap: $gap;
+            padding-bottom: $spacing-s;
+            transition: transform 0.3s ease;
+            /* Transition for smooth sliding effect */
+        }
+
+        .slide-button {
+            opacity: 0;
+            /* Initially hide the button */
+            transition: opacity 0.3s ease;
+            /* Transition for smooth opacity change */
+        }
+
+        &:hover {
+            .card-content {
+                transform: translateX(-$spacing-s);
+                /* Slide content to the left on hover */
+            }
+
+            .slide-button {
+                opacity: 1;
+                /* Show the button on hover */
+            }
+        }
+    }
+}

@@ -4,7 +4,13 @@ $corner-radius: 10px;
 //box-shadow
 $card-shadow: 0px 4px 100px rgba(201, 201, 201, 0.5);
 
-@mixin transparent-background {
+@mixin background-transparent {
     border: none;
     background-color: transparent;
+}
+
+@mixin position-bottom-left {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }

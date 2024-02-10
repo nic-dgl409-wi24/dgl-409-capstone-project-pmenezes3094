@@ -81,13 +81,55 @@ header .nav-bar nav {
   gap: 24px;
   justify-content: flex-end;
 }
-header .nav-bar nav button {
+
+.card-container {
+  -moz-columns: 4;
+       columns: 4;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+.card-container .card {
+  width: 100%;
+  margin-bottom: 24px;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  box-shadow: 0px 4px 100px rgba(201, 201, 201, 0.5);
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.card-container .card .card-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 24px;
+  padding-bottom: 10px;
+  transition: transform 0.3s ease;
+  /* Transition for smooth sliding effect */
+}
+.card-container .card .slide-button {
+  opacity: 0;
+  /* Initially hide the button */
+  transition: opacity 0.3s ease;
+  /* Transition for smooth opacity change */
+}
+.card-container .card:hover .card-content {
+  transform: translateX(-10px);
+  /* Slide content to the left on hover */
+}
+.card-container .card:hover .slide-button {
+  opacity: 1;
+  /* Show the button on hover */
+}
+
+.button-icon {
   width: 30px;
   height: 30px;
   border: none;
   background-color: transparent;
 }
-header .nav-bar nav button img {
+.button-icon img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -98,42 +140,15 @@ main .greeting {
   text-align: center;
   padding: 30px 0 30px 0;
 }
-main .grid-container {
-  -moz-columns: 4;
-       columns: 4;
-  -moz-column-gap: 24px;
-       column-gap: 24px;
-}
-main .grid-container .card {
-  width: 100%;
-  margin-bottom: 24px;
-  -moz-column-break-inside: avoid;
-       break-inside: avoid;
-  box-shadow: 0px 4px 100px rgba(201, 201, 201, 0.5);
-  border-radius: 10px;
-}
-main .grid-container .card .card-content {
-  transition: transform 0.3s ease; /* Transition for smooth sliding effect */
-}
-main .grid-container .card .slide-button {
-  opacity: 0; /* Initially hide the button */
-  transition: opacity 0.3s ease; /* Transition for smooth opacity change */
-}
-main .grid-container .card:hover .card-content {
-  transform: translateX(-20px); /* Slide content to the left on hover */
-}
-main .grid-container .card:hover .slide-button {
-  opacity: 1; /* Show the button on hover */
-}
 @media (max-width: 768px) {
-  main .grid-container {
+  main .card-container {
     width: 100%;
     -moz-columns: 3;
          columns: 3;
   }
 }
 @media (max-width: 480px) {
-  main .grid-container {
+  main .card-container {
     width: 100%;
     -moz-columns: 1;
          columns: 1;

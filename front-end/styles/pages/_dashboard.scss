@@ -1,84 +1,18 @@
-header {
-    height: 80px;
-    position: sticky;
-    top: 0;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid $color-primary-dark-version;
-
-    .nav-bar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        nav {
-            display: flex;
-            gap: $gap;
-            justify-content: flex-end;
-
-            button {
-                width: 30px;
-                height: 30px;
-                @include transparent-background;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                }
-            }
-
-        }
-    }
-}
-
 main {
-    .greeting{
+    .greeting {
         text-align: center;
         padding: $spacing-m 0 $spacing-m 0;
     }
 
-    .grid-container {
-        columns: 4;
-        column-gap: $gap;
-
-        .card {
-            width: 100%;
-            margin-bottom: $gap;
-            break-inside: avoid;
-            box-shadow: $card-shadow;
-            border-radius: $corner-radius;
-              
-                .card-content {
-                  transition: transform 0.3s ease; /* Transition for smooth sliding effect */
-                }
-              
-                .slide-button {
-                  opacity: 0; /* Initially hide the button */
-                  transition: opacity 0.3s ease; /* Transition for smooth opacity change */
-                }
-              
-                &:hover {
-                  .card-content {
-                    transform: translateX(-20px); /* Slide content to the left on hover */
-                  }
-              
-                  .slide-button {
-                    opacity: 1; /* Show the button on hover */
-                  }
-                }
-        }
-    }
-
     @media (max-width: 768px) {
-        .grid-container {
+        .card-container {
             width: 100%;
             columns: 3;
         }
     }
 
     @media (max-width: 480px) {
-        .grid-container {
+        .card-container {
             width: 100%;
             columns: 1;
         }
