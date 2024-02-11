@@ -5,10 +5,14 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 30px;
 }
-h2 span {
-  font-size: 24px;
+
+h3 {
+  font-size: 20px;
+}
+h3 span {
+  font-size: 20px;
 }
 
 .emphasize {
@@ -66,6 +70,7 @@ h2 span {
 header {
   height: 80px;
   position: sticky;
+  z-index: 1001;
   top: 0;
   display: flex;
   align-items: center;
@@ -143,30 +148,14 @@ header .nav-bar nav {
   border: none;
   border-radius: 10px;
   background-color: #def599;
-  color: #ffffff;
+  color: #333333;
 }
 
-.slide-bar {
-  width: 100%;
-  background-color: #ffffff;
-  box-shadow: 0px 4px 100px rgba(201, 201, 201, 0.5);
-  border-radius: 10px;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  display: none; /* Initially hide the content */
-  overflow: hidden; /* Hide overflow content */
-  transition: max-height 0.5s ease; /* Add smooth transition effect */
+.form {
+  padding-top: 50px 0px;
 }
-.slide-bar .container-slide-bar {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
-.slide-bar .container-slide-bar form label {
-  font-size: 30px;
-}
-.slide-bar .container-slide-bar .formfield {
+
+.formfield {
   max-width: 648px;
   background-color: transparent;
   border: none;
@@ -174,8 +163,71 @@ header .nav-bar nav {
   outline: none;
 }
 
-.slide-bar.active {
-  display: block; /* Show the content */
+.search-bar {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 100px rgba(201, 201, 201, 0.5);
+  border-radius: 10px;
+  border-radius: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  margin-top: 80px;
+  display: none;
+  overflow: hidden;
+}
+.search-bar .search-bar-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.search-bar .search-bar-container .content-search-bar {
+  padding: 50px 0px;
+}
+
+.search-bar.active {
+  display: block;
+}
+
+.add-bar {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 100px rgba(201, 201, 201, 0.5);
+  border-radius: 10px;
+  border-radius: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  margin-top: 80px;
+  display: none;
+  overflow: hidden;
+}
+.add-bar .add-bar-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.add-bar .add-bar-container .content-add-bar {
+  padding: 50px 0px;
+}
+.add-bar .add-bar-container .content-add-bar .message-field {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.add-bar .add-bar-container .content-add-bar .add-data {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 20px;
+}
+
+.add-bar.active {
+  display: block;
 }
 
 main .greeting {

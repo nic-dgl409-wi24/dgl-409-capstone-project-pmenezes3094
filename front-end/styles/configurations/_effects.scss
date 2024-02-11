@@ -36,5 +36,22 @@ $card-shadow: 0px 4px 100px rgba(201, 201, 201, 0.5);
     outline: none;
 }
 
+@mixin slide-bar {
+    @include card;
+    border-radius: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    margin-top: $size-header; 
+}
+
+@mixin container-slide-bar {
+    display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+}
+
 
 

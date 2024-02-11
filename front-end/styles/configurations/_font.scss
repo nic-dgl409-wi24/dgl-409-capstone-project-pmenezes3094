@@ -29,9 +29,13 @@ h1 {
 }
 
 h2 {
-    font-size: $font-size-5;
+    font-size: $font-size-6; 
+}
+
+h3 {
+    font-size: $font-size-4;
     span {
-        font-size: $font-size-5;
+        font-size: $font-size-4;
     }
 }
 

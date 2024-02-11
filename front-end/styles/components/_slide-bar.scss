@@ -1,29 +1,59 @@
-.slide-bar {
-    @include card;
-    height: 200px;
-    display: flex;
-    align-items: center;
-
-    display: none; /* Initially hide the content */
-    overflow: hidden; /* Hide overflow content */
-    transition: max-height 0.5s ease; /* Add smooth transition effect */
-
-    .container-slide-bar {
-        display: flex;
-        text-align: center;
-        justify-content: center;
-
-        form label {
-            font-size: $font-size-6;
-        }
-
-        .formfield {
-            @include formfield;
-        }
-    }
-
+.form {
+    padding-top: $spacing-l 0px;
 }
 
-.slide-bar.active {
-    display: block; /* Show the content */
+.formfield {
+    @include formfield;
+}
+
+
+//Search bar
+
+.search-bar {
+    @include slide-bar;
+    display: none;
+    overflow: hidden;
+
+    .search-bar-container {
+        @include container-slide-bar;
+
+        .content-search-bar {
+            padding: $spacing-l 0px;
+        }
+    }
+}
+
+.search-bar.active {
+    display: block;
+}
+
+//add bar
+.add-bar {
+    @include slide-bar;
+    display: none;
+    overflow: hidden;
+
+    .add-bar-container {
+        @include container-slide-bar;
+
+        .content-add-bar {
+            padding: $spacing-l 0px;
+
+            .message-field {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+            }
+            .add-data {
+                display: flex;
+                justify-content: center;
+                gap: $gap;
+                padding-top: $spacing-r;
+            }
+        }
+    }
+}
+
+.add-bar.active {
+    display: block;
 }
