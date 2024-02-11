@@ -312,4 +312,12 @@ main .greeting {
 }
 .pre-login-display-card .card-display .content-card-display p {
   margin-top: 50px;
+}
+
+.hotspot {
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: transparent;
 }/*# sourceMappingURL=style.css.map */
