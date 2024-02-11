@@ -1,20 +1,13 @@
-.first-time {
+.first-time-display-card {
     height: calc(100vh - $size-header);
-    background-image: url(../assets/images/background.jpg);
-    @include background-image;
-    display: flex;
-    align-items: center;
+    @include form-pages;
 
-    .card-first-time {
-        @include card;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .card-display {
+        @include card-display;
 
-        .content-first-time {
-            max-width: 390px;
+        .content-card-display {
+            @include content-card-display;
             text-align: center;
-            padding: $spacing-xxl 0;
 
             h2 {
                 font-family: $font-family-tertiary;
@@ -23,3 +16,5 @@
         }
     }
 }
+
+

@@ -1,0 +1,25 @@
+.pre-login-display-card {
+    height: 100vh;
+    @include form-pages;
+
+    .card-display {
+        @include card-display;
+
+        .content-card-display {
+            @include content-card-display;
+
+            .pre-login-logo {
+                padding-bottom: $spacing-m;
+                text-align: center;
+            }
+
+            button {
+                margin-top: $spacing-r;
+            }
+
+            p {
+                margin-top: $spacing-l;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@mixin form-pages{
+    background-image: url(../assets/images/background.jpg);
+    @include background-image;
+    display: flex;
+    align-items: center;
+}
+
+@mixin card-display{
+    @include card;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin content-card-display{
+    max-width: 390px;
+    padding: $spacing-xxl 0;
+}
