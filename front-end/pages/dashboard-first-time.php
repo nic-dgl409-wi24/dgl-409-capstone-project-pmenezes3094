@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="hotspot"><a href="dashboard.html">next</a></div>
+    <div class="hotspot"><a href="dashboard.php">next</a></div>
 
     <header>
         <div class="container nav-bar">

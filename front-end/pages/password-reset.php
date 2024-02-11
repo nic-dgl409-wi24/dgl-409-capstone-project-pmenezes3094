@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="hotspot"><a href="dashboard-first-time.html">next</a></div>
+    <div class="hotspot"><a href="dashboard-first-time.php">next</a></div>
 
     <main class="pre-login-display-card">
         <div class="container">

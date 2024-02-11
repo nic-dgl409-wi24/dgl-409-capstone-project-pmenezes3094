@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="hotspot"><a href="password-reset.html">next</a></div>
+    <div class="hotspot"><a href="password-reset.php">next</a></div>
 
     <main class="pre-login-display-card">
         <div class="container">
@@ -19,26 +19,26 @@
                     <div class="pre-login-logo">
                         <h1>Project Abundance</h1>
                     </div>
-                    <form action="#" method="post">
+                    <form action="../../back-end/pages/register.php" method="post">
                         <div class="form-group">
-                            <label for="firstname">First Name</label>
-                            <input type="text" id="firstname" name="firstname" class="formfield" required>
+                            <label for="user_firstName">First Name</label>
+                            <input type="text" id="firstname" name="user_firstName" class="formfield" required>
                         </div>
                         <div class="form-group">
-                            <label for="lastname">Last Name</label>
-                            <input type="text" id="lastname" name="lastname" class="formfield" required>
+                            <label for="user_lastName">Last Name</label>
+                            <input type="text" id="lastname" name="user_lastName" class="formfield" required>
                         </div>
                         <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" id="username" name="username" class="formfield" required>
+                            <label for="user_username">Username</label>
+                            <input type="text" id="username" name="user_username" class="formfield" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="formfield" required>
+                            <label for="user_email">Email</label>
+                            <input type="email" id="email" name="user_email" class="formfield" required>
                         </div>
                         <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" name="password" class="formfield" required>
+                            <label for="user_password">Password</label>
+                            <input type="password" id="password" name="user_password" class="formfield" required>
                         </div>
                         <div class="form-group">
                             <label for="confirm-password">Confirm Password</label>

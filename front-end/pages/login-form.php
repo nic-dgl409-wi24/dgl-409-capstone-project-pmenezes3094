@@ -11,7 +11,7 @@
 
 
 <body>
-    <div class="hotspot"><a href="register-form.html">next</a></div>
+    <div class="hotspot"><a href="register-form.php">next</a></div>
 
     <main class="pre-login-display-card">
         <div class="container">
@@ -20,14 +20,14 @@
                     <div class="pre-login-logo">
                         <h1>Project Abundance</h1>
                     </div>
-                    <form action="#" method="post">
+                    <form action="../../back-end/pages/login.php" method="post">
                         <div class="formfield-group">
-                            <label for="username">Username</label>
-                            <input type="text" id="username" name="username" class="formfield" required>
+                            <label for="user_username">Username</label>
+                            <input type="text" id="username" name="user_username" class="formfield" required>
                         </div>
                         <div class="formfield-group">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" name="password" class="formfield" required>
+                            <label for="user_password">Password</label>
+                            <input type="password" id="password" name="user_password" class="formfield" required>
                         </div>
                         <button type="submit" class="button-primary">Login</button>
                     </form>
