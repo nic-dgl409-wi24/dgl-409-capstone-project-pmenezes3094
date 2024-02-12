@@ -1,3 +1,17 @@
-.formfield-group {
-    padding: $spacing-s 0; 
+.form {
+    padding-top: $spacing-l 0px; 
 }
+
+.formfield-group {
+    padding: $spacing-s 0;
+}
+
+.formfield {
+    max-width: 648px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $color-secondary-dark-version;
+    outline: none;
+}
+
+

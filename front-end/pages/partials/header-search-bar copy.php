@@ -1,8 +1,7 @@
-
-    <div class="search-bar">
-    <div class="container-search-bar">
-        <div class="content-search-bar">
-        <h2>Search</h2>
+<div class="search-bar">
+        <div class="container search-bar-container">
+            <div class="content-search-bar">
+                <h2>Search</h2>
                 <form action="">
                     <label for="search">Search your Thought Treasury</label>
                     <div class="search-field">
@@ -10,7 +9,6 @@
                         <button type="submit" class="button-icon"><img src="../assets/icons/search.svg" alt=""></button>
                     </div>
                 </form>
+            </div>
         </div>
-
     </div>
-</div>

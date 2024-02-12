@@ -1,59 +1,66 @@
-.form {
-    padding-top: $spacing-l 0px;
+@mixin slide-bar {
+    @include card;
+    border-radius: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    margin-top: $size-header; 
 }
 
-.formfield {
-    @include formfield;
-}
-
-
-//Search bar
-
+// Search bar
 .search-bar {
     @include slide-bar;
     display: none;
     overflow: hidden;
 
-    .search-bar-container {
-        @include container-slide-bar;
+    .container-search-bar {
+        display: flex;
+        justify-content: center;
 
         .content-search-bar {
+            max-width: 648px;
             padding: $spacing-l 0px;
+
+            .search-field {
+                display: flex;
+            }
         }
     }
 }
-
 .search-bar.active {
     display: block;
 }
 
-//add bar
+// add bar
 .add-bar {
     @include slide-bar;
     display: none;
     overflow: hidden;
 
-    .add-bar-container {
-        @include container-slide-bar;
+    .container-add-bar {
+        display: flex;
+        justify-content: center;
 
         .content-add-bar {
+            max-width: 648px;
             padding: $spacing-l 0px;
 
-            .message-field {
+            .add-bar-all-options {
                 display: flex;
-                justify-content: center;
-                align-items: flex-end;
-            }
-            .add-data {
-                display: flex;
-                justify-content: center;
-                gap: $gap;
-                padding-top: $spacing-r;
+                justify-content: space-around;
+                align-items: center;
+
+                .add-data {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    gap: $gap;
+                }
             }
         }
     }
 }
-
 .add-bar.active {
     display: block;
 }

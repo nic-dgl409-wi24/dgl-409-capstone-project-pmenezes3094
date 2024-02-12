@@ -151,18 +151,6 @@ header .nav-bar nav {
   color: #333333;
 }
 
-.form {
-  padding-top: 50px 0px;
-}
-
-.formfield {
-  max-width: 648px;
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid #def599;
-  outline: none;
-}
-
 .search-bar {
   width: 100%;
   background-color: #ffffff;
@@ -177,14 +165,16 @@ header .nav-bar nav {
   display: none;
   overflow: hidden;
 }
-.search-bar .search-bar-container {
+.search-bar .container-search-bar {
   display: flex;
-  text-align: center;
   justify-content: center;
-  align-items: center;
 }
-.search-bar .search-bar-container .content-search-bar {
+.search-bar .container-search-bar .content-search-bar {
+  max-width: 648px;
   padding: 50px 0px;
+}
+.search-bar .container-search-bar .content-search-bar .search-field {
+  display: flex;
 }
 
 .search-bar.active {
@@ -205,33 +195,44 @@ header .nav-bar nav {
   display: none;
   overflow: hidden;
 }
-.add-bar .add-bar-container {
+.add-bar .container-add-bar {
   display: flex;
-  text-align: center;
   justify-content: center;
-  align-items: center;
 }
-.add-bar .add-bar-container .content-add-bar {
+.add-bar .container-add-bar .content-add-bar {
+  max-width: 648px;
   padding: 50px 0px;
 }
-.add-bar .add-bar-container .content-add-bar .message-field {
+.add-bar .container-add-bar .content-add-bar .add-bar-all-options {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: space-around;
+  align-items: center;
 }
-.add-bar .add-bar-container .content-add-bar .add-data {
+.add-bar .container-add-bar .content-add-bar .add-bar-all-options .add-data {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
   gap: 24px;
-  padding-top: 20px;
 }
 
 .add-bar.active {
   display: block;
 }
 
+.form {
+  padding-top: 50px 0px;
+}
+
 .formfield-group {
   padding: 10px 0;
+}
+
+.formfield {
+  max-width: 648px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #def599;
+  outline: none;
 }
 
 main .greeting {

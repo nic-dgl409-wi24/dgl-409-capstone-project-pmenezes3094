@@ -8,11 +8,11 @@
                 </div>
                 <form action="../../back-end/pages/login.php" method="post">
                     <div class="formfield-group">
-                        <label for="user_username">Username</label>
+                        <label for="user_username">Username</label><br>
                         <input type="text" id="username" name="user_username" class="formfield" required>
                     </div>
                     <div class="formfield-group">
-                        <label for="user_password">Password</label>
+                        <label for="user_password">Password</label><br>
                         <input type="password" id="password" name="user_password" class="formfield" required>
                         <a href="password-reset-view.php">Forgot password?</a> <!-- Add the forgot password link -->
                     </div>
