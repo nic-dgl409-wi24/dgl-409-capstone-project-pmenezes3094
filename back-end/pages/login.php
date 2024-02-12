@@ -33,11 +33,11 @@ if ($user) {
         redirectWithMessage("Login Successful", "../../front-end/pages/dashboard-first-time.php");
     } else {
         // Redirect to the login form with an error message if passwords don't match
-        redirectWithMessage("Username and password do not match", "../../front-end/pages/login-form.php");
+        redirectWithMessage("Username and password do not match", "../../front-end/pages/login-view.php");
     }
 } else {
     // Redirect to the login form with an error message if the user doesn't exist
-    redirectWithMessage("User does not exist", "../../front-end/pages/login-form.php");
+    redirectWithMessage("User does not exist", "../../front-end/pages/login-view.php");
 }
 
 // Function to redirect with a JavaScript alert message
@@ -46,3 +46,5 @@ function redirectWithMessage($message, $url) {
     echo '<script>window.location.href = "' . $url . '";</script>';
 }
 ?>
+
+<a href="../../front-end/pages/login"></a>
