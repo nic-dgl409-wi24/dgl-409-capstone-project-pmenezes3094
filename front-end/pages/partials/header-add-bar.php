@@ -2,7 +2,7 @@
     <div class="container-add-bar">
         <div class="content-add-bar">
             <h2>Record a thought</h2>
-            <form action="">
+            <form action="../../back-end/pages/content-text.php" method="POST">
                 <div class="formfield-group">
                     <label for="data_content">What's on your mind</label><br>
                     <textarea name="data_content" id="data_content" cols="10" rows="4" class="formfield"></textarea>
