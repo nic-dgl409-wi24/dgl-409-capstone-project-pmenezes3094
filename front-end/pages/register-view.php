@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php require 'partials/head.php'; ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>register</title>
 
-    <link rel="stylesheet" href="../styles/style.css">
-</head>
-
-<body>
-    <div class="hotspot"><a href="password-reset.php">next</a></div>
 
     <main class="pre-login-display-card">
         <div class="container">
@@ -46,13 +36,10 @@
                         </div>
                         <button type="submit" class="button-primary">Register</button>
                     </form>
-                    <p>Already registered? <a href="login.html">Login here</a></p>
+                    <p>Already registered? <a href="login-view.php">Login here</a></p>
                 </div>
             </div>
         </div>
     </main>
 
-    <script src="../scripts/script.js"></script>
-</body>
-
-</html>
+<?php require 'partials/closing.php'; ?>
