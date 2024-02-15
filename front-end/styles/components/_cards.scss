@@ -1,38 +1,67 @@
 .card-container {
     columns: 4;
     column-gap: $gap;
+    max-width: 100%;
 
     .card {
-        margin-bottom: $gap;
-        break-inside: avoid;
         @include card;
+        break-inside: avoid;
+        overflow: hidden;
+        margin-bottom: $gap;
+        position: relative;
 
-        @include position-bottom-left;
+        .data-content {
+            margin: $gap;
+            z-index: 1;
+            position: relative;
+        }
 
         .card-content {
-            @include position-bottom-left;
             gap: $gap;
             padding-bottom: $spacing-s;
             transition: transform 0.3s ease;
-            /* Transition for smooth sliding effect */
+            position: absolute;
+            transform: translate(50%);
+            bottom: 0;
+            right: 0;
+            z-index: 3;
+        }
+
+        .data-content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
         .slide-button {
             opacity: 0;
-            /* Initially hide the button */
             transition: opacity 0.3s ease;
-            /* Transition for smooth opacity change */
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0);
+            z-index: 2;
+            transition: background-color 0.3s ease; 
         }
 
         &:hover {
             .card-content {
-                transform: translateX(-$spacing-s);
-                /* Slide content to the left on hover */
+                transform: translateX(0%);
             }
 
             .slide-button {
                 opacity: 1;
-                /* Show the button on hover */
+            }
+
+            &::before {
+                background-color: rgba(255, 255, 255, 0.8);
             }
         }
     }

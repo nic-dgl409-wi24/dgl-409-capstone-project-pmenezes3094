@@ -12,7 +12,7 @@ $size-card-xl: 399px;
 $size-card-xxl: 456px;
 
 .card-xxs{
-    height: $size-card-xxs;
+    min-height: $size-card-xxs;
 }
 
 .card-xs{

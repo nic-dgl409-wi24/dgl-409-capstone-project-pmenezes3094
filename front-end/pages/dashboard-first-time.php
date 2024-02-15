@@ -1,6 +1,6 @@
 <?php require 'partials/head.php'; ?>
 <?php require '../../back-end/pages/session-variables-set.php'; ?>
-    <div class="hotspot"><a href="dashboard.html">next</a></div>
+    <div class="hotspot"><a href="dashboard.php">next</a></div>
 
 <?php require 'partials/header.php';?>
 
