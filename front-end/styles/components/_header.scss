@@ -6,6 +6,8 @@ header {
     display: flex;
     align-items: center;
     border-bottom: 1px solid $color-primary-dark-version;
+    background-color: $color-primary-light-version;
+    z-index: 3000;
 
     .nav-bar {
         display: flex;

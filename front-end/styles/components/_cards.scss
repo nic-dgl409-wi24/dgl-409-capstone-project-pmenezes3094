@@ -3,15 +3,17 @@
     column-gap: $gap;
     max-width: 100%;
 
-    .card {
+    .grid-card {
         @include card;
         break-inside: avoid;
         overflow: hidden;
         margin-bottom: $gap;
         position: relative;
+        min-height: $size-header;
 
         .data-content {
-            margin: $gap;
+            width: 100%;
+            padding: $gap;
             z-index: 1;
             position: relative;
         }
@@ -21,12 +23,12 @@
             padding-bottom: $spacing-s;
             transition: transform 0.3s ease;
             position: absolute;
-            transform: translate(50%);
-            bottom: 0;
+            /* Positioning to top right corner */
+            top: 0;
             right: 0;
             z-index: 3;
         }
-
+        
         .data-content img {
             max-width: 100%;
             height: auto;

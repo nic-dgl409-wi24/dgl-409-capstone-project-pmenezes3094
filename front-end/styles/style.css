@@ -19,42 +19,11 @@ h3 span {
   font-weight: 900;
 }
 
-.card-xxs {
-  min-height: 57px;
-}
-
-.card-xs {
-  height: 114px;
-}
-
-.card-s {
-  height: 171px;
-}
-
-.card-r {
-  height: 228px;
-}
-
-.card-m {
-  height: 285px;
-}
-
-.card-l {
-  height: 342px;
-}
-
-.card-xl {
-  height: 399px;
-}
-
-.card-xxl {
-  height: 456px;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  width: 100%;
   font-family: "Nunito", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -74,6 +43,8 @@ header {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #333333;
+  background-color: #ffffff;
+  z-index: 3000;
 }
 header .nav-bar {
   display: flex;
@@ -93,7 +64,7 @@ header .nav-bar nav {
        column-gap: 24px;
   max-width: 100%;
 }
-.card-container .card {
+.card-container .grid-card {
   width: 100%;
   background-color: #ffffff;
   box-shadow: 0px 4px 100px rgba(201, 201, 201, 0.5);
@@ -103,33 +74,35 @@ header .nav-bar nav {
   overflow: hidden;
   margin-bottom: 24px;
   position: relative;
+  min-height: 80px;
 }
-.card-container .card .data-content {
-  margin: 24px;
+.card-container .grid-card .data-content {
+  width: 100%;
+  padding: 24px;
   z-index: 1;
   position: relative;
 }
-.card-container .card .card-content {
+.card-container .grid-card .card-content {
   gap: 24px;
   padding-bottom: 10px;
   transition: transform 0.3s ease;
   position: absolute;
-  transform: translate(50%);
-  bottom: 0;
+  /* Positioning to top right corner */
+  top: 0;
   right: 0;
   z-index: 3;
 }
-.card-container .card .data-content img {
+.card-container .grid-card .data-content img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
 }
-.card-container .card .slide-button {
+.card-container .grid-card .slide-button {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.card-container .card::before {
+.card-container .grid-card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -140,13 +113,13 @@ header .nav-bar nav {
   z-index: 2;
   transition: background-color 0.3s ease;
 }
-.card-container .card:hover .card-content {
+.card-container .grid-card:hover .card-content {
   transform: translateX(0%);
 }
-.card-container .card:hover .slide-button {
+.card-container .grid-card:hover .slide-button {
   opacity: 1;
 }
-.card-container .card:hover::before {
+.card-container .grid-card:hover::before {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
