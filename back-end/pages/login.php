@@ -31,6 +31,7 @@ if ($user) {
 
         // Redirect to the dashboard page after successful login
         redirectWithMessage("Login Successful", "../../front-end/pages/dashboard-first-time.php");
+
     } else {
         // Redirect to the login form with an error message if passwords don't match
         redirectWithMessage("Username and password do not match", "../../front-end/pages/login-view.php");
