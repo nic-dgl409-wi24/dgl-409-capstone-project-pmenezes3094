@@ -16,7 +16,26 @@
             padding: $gap;
             z-index: 1;
             position: relative;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+
+            p {
+                width: 100%;
+                word-break: break-all;
+            }
         }
+
+        // .data-content img {
+        //     max-width: 100%;
+        //     height: auto;
+        //     display: block;
+        //     margin: 0 auto;
+        // }
 
         .card-content {
             gap: $gap;
@@ -27,13 +46,6 @@
             top: 0;
             right: 0;
             z-index: 3;
-        }
-        
-        .data-content img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
         }
 
         .slide-button {

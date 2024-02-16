@@ -19,7 +19,6 @@ require 'partials/head.php';
             <div class="grid-card">
                 <div class="data-content">
                     <p>hHi My name is priya and I love design. this is continue flow of content that I am testing right now. I'm trying to write more content to test more contest sorry</p>
-                    <img src="../assets/images/background.jpg">
                 </div>
                 <div class="card-content">
                     <button class="slide-button button-icon">
