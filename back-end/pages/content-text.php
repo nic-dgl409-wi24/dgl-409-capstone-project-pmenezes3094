@@ -28,7 +28,8 @@ $stmt->bindParam(':data_tag', $data_tag, PDO::PARAM_STR);
 // Execute the SQL statement
 if ($stmt->execute()) {
     // Redirect back to the referring page after successful insertion
-    redirectWithMessage("Data inserted successfully.", $_SERVER['HTTP_REFERER']);
+    // redirectWithMessage("Data inserted successfully.", $_SERVER['HTTP_REFERER']);
+    redirectWithMessage("Data inserted successfully.", "reload.php");
 } else {
     // Handle errors
     $errorInfo = $stmt->errorInfo();

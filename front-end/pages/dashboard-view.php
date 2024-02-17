@@ -12,7 +12,6 @@ require 'partials/head.php';
         <div class="greeting">
             <h3>Welcome to your Thought Treasury, <span class="emphasize"><?php echo $user_firstName; ?>!</span></h3>
         </div>
-
         <div class="card-container">
             <?php foreach ($cards_data as $card) : ?>
                 <div class="grid-card">

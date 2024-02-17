@@ -35,7 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Execute the SQL statement
         if ($stmt_delete->execute()) {
             // Redirect to the page where records are displayed
-            header("Location: ../../front-end/pages/dashboard-view.php");
+            // header("Location: ../../front-end/pages/dashboard-view.php");
+            header("Location: ../../back-end/pages/reload.php");
             exit();
         } else {
             echo "Error deleting record";

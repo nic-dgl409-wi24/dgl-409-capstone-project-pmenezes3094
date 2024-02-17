@@ -66,7 +66,8 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
         $data_type = determineDataType(strtolower($file_extension));
 
         if (insertData($user_id, $data_type, $filepath, $data_tag)) {
-            redirectWithMessage("File uploaded successfully.", $_SERVER['HTTP_REFERER']);
+            // redirectWithMessage("File uploaded successfully.", $_SERVER['HTTP_REFERER']);
+            redirectWithMessage("File uploaded successfully.", "reload.php");
         } else {
             redirectWithMessage("Error inserting data into the database.", "error_redirect_location.php");
         }
