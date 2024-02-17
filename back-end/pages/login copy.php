@@ -17,7 +17,6 @@ $user = $stmt->fetch();
 
 // Check if user exists
 if ($user) {
-    $user_id = $user['user_id'];
     $user_password = $user['user_password'];
 
     // Check if the entered password matches the stored password
@@ -30,20 +29,8 @@ if ($user) {
         $_SESSION['user_firstName'] = $user['user_firstName'];
         $_SESSION['user_id'] = $user['user_id'];
 
-        // Check if the user has data in the data table
-        $sql_check_data = "SELECT COUNT(*) AS count FROM data WHERE user_id = :user_id";
-        $stmt_check_data = $conn->prepare($sql_check_data);
-        $stmt_check_data->bindParam(':user_id', $user_id);
-        $stmt_check_data->execute();
-        $row = $stmt_check_data->fetch(PDO::FETCH_ASSOC);
-
-        if ($row['count'] > 0) {
-            // Redirect to the dashboard page if data exists
-            redirectWithMessage("Login Successful", "../../front-end/pages/dashboard-view.php");
-        } else {
-            // Redirect to the first-time dashboard view if no data exists
-            redirectWithMessage("Login Successful", "../../front-end/pages/dashboard-first-time.php");
-        }
+        // Redirect to the dashboard page after successful login
+        redirectWithMessage("Login Successful", "../../front-end/pages/dashboard-first-time.php");
 
     } else {
         // Redirect to the login form with an error message if passwords don't match
@@ -60,3 +47,5 @@ function redirectWithMessage($message, $url) {
     echo '<script>window.location.href = "' . $url . '";</script>';
 }
 ?>
+
+<a href="../../front-end/pages/login"></a>

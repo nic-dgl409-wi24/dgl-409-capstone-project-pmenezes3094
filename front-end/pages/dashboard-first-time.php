@@ -1,9 +1,6 @@
 <?php require 'partials/head.php'; ?>
 <?php require '../../back-end/pages/session-variables-set.php'; ?>
-    
-
 <?php require 'partials/header.php';?>
-<div class="hotspot"><a href="dashboard-view.php">next</a></div>
 
     <main class="first-time-display-card">
         <div class="container">

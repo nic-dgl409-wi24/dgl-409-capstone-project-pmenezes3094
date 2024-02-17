@@ -31,8 +31,8 @@
                 <button onclick="toggleForm('form-text')" data-form-id="form-text" class="active button-icon">
                     <img src="../assets/icons/textnote.svg" alt="">
                 </button>
-                <button onclick="toggleForm('form-multimedia')" data-form-id="form-image" class="button-icon">
-                    <img src="../assets/icons/image.svg" alt="">
+                <button onclick="toggleForm('form-multimedia')" data-form-id="form-multimedia" class="button-icon">
+                    <img src="../assets/icons/upload.svg" alt="">
                 </button>
             </div>
         </div>
