@@ -92,6 +92,10 @@ header .nav-bar nav {
   width: 100%;
   word-break: break-all;
 }
+.card-container .grid-card .data-content a {
+  width: 100%;
+  word-break: break-all;
+}
 .card-container .grid-card .card-content {
   gap: 24px;
   padding-bottom: 10px;
@@ -149,6 +153,10 @@ header .nav-bar nav {
   color: #333333;
 }
 
+.button-active {
+  border-bottom: 2px solid #def599;
+}
+
 .search-bar {
   width: 100%;
   background-color: #ffffff;
@@ -201,12 +209,7 @@ header .nav-bar nav {
   max-width: 648px;
   padding: 50px 0px;
 }
-.add-bar .container-add-bar .content-add-bar .add-bar-all-options {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.add-bar .container-add-bar .content-add-bar .add-bar-all-options .add-data {
+.add-bar .container-add-bar .content-add-bar .add-data {
   display: flex;
   justify-content: flex-end;
   align-items: center;

@@ -28,14 +28,13 @@
                 width: 100%;
                 word-break: break-all;
             }
-        }
 
-        // .data-content img {
-        //     max-width: 100%;
-        //     height: auto;
-        //     display: block;
-        //     margin: 0 auto;
-        // }
+            a {
+                width: 100%;
+                word-break: break-all;
+            }
+
+        }
 
         .card-content {
             gap: $gap;

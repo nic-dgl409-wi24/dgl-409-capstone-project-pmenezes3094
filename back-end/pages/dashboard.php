@@ -21,6 +21,8 @@ function generateCardContent($data_type, $data_content) {
             return "<audio controls><source src='$data_content' type='audio/mp3'></audio>";
         case 'link':
             return "<a href='$data_content'>$data_content</a>";
+        case 'file':
+            return "<a href='$data_content'>$data_content</a>";
         default:
             return "<p>$data_content</p>";
     }

@@ -7,6 +7,7 @@
     <title>Project Abundance</title>
 
     <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/script.js"></script>
 </head>
 
 <body>

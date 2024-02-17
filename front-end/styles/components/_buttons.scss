@@ -18,3 +18,7 @@
     background-color: $color-secondary-dark-version;
     color: $color-primary-dark-version;
 }
+
+.button-active {
+    border-bottom: 2px solid $color-secondary-dark-version;
+}

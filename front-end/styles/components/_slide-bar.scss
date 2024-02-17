@@ -46,17 +46,11 @@
             max-width: 648px;
             padding: $spacing-l 0px;
 
-            .add-bar-all-options {
+            .add-data {
                 display: flex;
-                justify-content: space-around;
+                justify-content: flex-end;
                 align-items: center;
-
-                .add-data {
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: center;
-                    gap: $gap;
-                }
+                gap: $gap;
             }
         }
     }
