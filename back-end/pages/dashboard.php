@@ -22,7 +22,7 @@ function generateCardContent($data_type, $data_content) {
         case 'link':
             return "<a href='$data_content'>$data_content</a>";
         case 'file':
-            return "<a href='$data_content'>$data_content</a>";
+            return "<a href='$data_content' download>$data_content</a>";
         default:
             return "<p>$data_content</p>";
     }

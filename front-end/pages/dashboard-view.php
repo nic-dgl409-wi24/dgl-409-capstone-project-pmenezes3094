@@ -15,19 +15,21 @@ require 'partials/head.php';
         <div class="card-container">
             <?php foreach ($cards_data as $card) : ?>
                 <div class="grid-card">
-                    <div class="data-content">
-                        <?php echo generateCardContent($card['data_type'], $card['data_content']); ?>
-                    </div>
-                    <div class="card-content">
-                        <button class="slide-button button-icon">
+                <div class="card-content">
+                    <div class="card-buttons">
+                    <button class="button-hover">
                             <img src="../assets/icons/edit.svg" alt="Edit">
                         </button>
                         <form action="../../back-end/pages/delete.php" method="post">
                             <input type="hidden" name="data_id" value="<?php echo $card['data_id']; ?>">
-                            <button type="submit" class="slide-button button-icon" name="delete">
+                            <button type="submit" class="button-hover" name="delete">
                                 <img src="../assets/icons/delete.svg" alt="Delete">
                             </button>
                         </form>
+                    </div>
+                    </div>
+                    <div class="data-content">
+                        <?php echo generateCardContent($card['data_type'], $card['data_content']); ?>
                     </div>
                 </div>
             <?php endforeach; ?>

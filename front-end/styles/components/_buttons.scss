@@ -1,4 +1,4 @@
-.button-icon {
+@mixin button-icon {
     width: 30px;
     height: 30px;
     @include background-transparent;
@@ -8,6 +8,10 @@
         height: 100%;
         object-fit: contain;
     }
+}
+
+.button-icon {
+    @include button-icon;
 }
 
 .button-primary {
@@ -21,4 +25,8 @@
 
 .button-active {
     border-bottom: 2px solid $color-secondary-dark-version;
+}
+
+.button-hover {
+    @include button-icon;
 }

@@ -14,9 +14,6 @@
         .data-content {
             width: 100%;
             padding: $gap;
-            z-index: 1;
-            position: relative;
-
             img {
                 max-width: 100%;
                 height: auto;
@@ -37,49 +34,22 @@
         }
 
         .card-content {
-            gap: $gap;
-            padding-bottom: $spacing-s;
-            transition: transform 0.3s ease;
-            position: absolute;
-            /* Positioning to top right corner */
-            top: 0;
-            right: 0;
-            z-index: 3;
-        }
+            display:none;
 
-        .slide-button {
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0);
-            z-index: 2;
-            transition: background-color 0.3s ease; 
+            .card-buttons{
+                display: flex;
+                gap: $gap;
+            }
         }
 
         &:hover {
             .card-content {
-                transform: translateX(0%);
+                display: block;
             }
 
-            .slide-button {
-                opacity: 1;
-            }
-
-            &::before {
-                background-color: rgba(255, 255, 255, 0.8);
-            }
         }
     }
 }
-
 
 
 
