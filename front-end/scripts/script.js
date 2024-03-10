@@ -60,3 +60,69 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+var modal = document.getElementById('expand-modal');
+var modalImg = document.getElementById('modalImage');
+var modalVideo = document.getElementById('modalVideo');
+var span = document.getElementsByClassName('close')[0];
+
+// // Function to close the modal
+// function closeModal() {
+//     modal.style.display = 'none';
+//     document.body.style.overflow = 'auto';
+//     modalImg.style.display = 'none';
+//     modalVideo.style.display = 'none';
+//     // Pause any playing video
+//     modalVideo.pause();
+// }
+
+// // Event listener for the close button
+// span.onclick = function() {
+//     closeModal();
+// }
+
+// Event listener for clicking outside the modal
+window.onclick = function(event) {
+    if (event.target == modal) {
+        closeModal();
+    }
+}
+
+// Event listeners for images
+var images = document.querySelectorAll('.modal-trigger');
+images.forEach(function(image) {
+    image.onclick = function(){
+        modal.style.display = 'flex';
+        modalImg.src = this.src;
+        modalImg.style.display = 'block';
+        modalVideo.style.display = 'none';
+        document.body.style.overflow = 'hidden';
+    }
+});
+
+// Event listeners for videos
+var videos = document.querySelectorAll('.modal-video');
+videos.forEach(function(video) {
+    video.onclick = function(){
+        modal.style.display = 'flex';
+        modalImg.style.display = 'none';
+        modalVideo.style.display = 'block';
+        modalVideo.src = this.querySelector('source').src;
+        document.body.style.overflow = 'hidden';
+        modalVideo.play(); // Start playing the video
+    }
+});
+
+// function openModal() {
+//     document.getElementById('modal-art').style.display = 'block';
+//     document.body.style.overflow = 'hidden'; // Disable background scroll
+//   }
+  
+//   function closeModal() {
+//     document.getElementById('modal-art').style.display = 'none';
+//     document.body.style.overflow = 'auto'; // Enable background scroll
+//   }
+
+
+
+
+

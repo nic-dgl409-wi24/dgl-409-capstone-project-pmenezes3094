@@ -36,5 +36,6 @@ require 'partials/head.php';
         </div>
     </div>
 </main>
+<?php require 'partials/modal-expand-card.php'; ?>
 
 <?php require 'partials/closing.php'; ?>
