@@ -81,8 +81,7 @@ header .nav-bar nav {
   padding: 24px;
 }
 .card-container .grid-card .data-content img {
-  max-width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   margin: 0 auto;
 }
@@ -96,6 +95,11 @@ header .nav-bar nav {
 }
 .card-container .grid-card .card-content {
   display: none;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  background-color: white;
+  z-index: 1;
 }
 .card-container .grid-card .card-content .card-buttons {
   display: flex;
@@ -112,19 +116,27 @@ header .nav-bar nav {
   background-color: transparent;
 }
 .button-icon img {
-  width: 100%;
-  height: 100%;
+  width: 20px;
+  height: 20px;
   -o-object-fit: contain;
      object-fit: contain;
 }
+.button-icon:hover {
+  background-color: #def599;
+  border-radius: 20px;
+}
 
 .button-primary {
-  height: 50px;
+  height: 40px;
   max-width: 228px;
   border: none;
   border-radius: 10px;
   background-color: #def599;
   color: #333333;
+}
+.button-primary:hover {
+  border: 1px solid #def599;
+  background-color: transparent;
 }
 
 .button-active {
@@ -138,10 +150,22 @@ header .nav-bar nav {
   background-color: transparent;
 }
 .button-hover img {
-  width: 100%;
-  height: 100%;
+  width: 20px;
+  height: 20px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.button-hover:hover {
+  background-color: #def599;
+  border-radius: 20px;
+}
+
+.button-text {
+  background-color: transparent;
+  color: #def599;
+  border: none;
+  max-width: 228px;
+  text-align: left;
 }
 
 .search-bar {
@@ -231,32 +255,43 @@ header .nav-bar nav {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
-  overflow-y: auto;
   z-index: 9999;
 }
-.modal .modal-content {
+
+.modal-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #ffffff;
   padding: 20px;
-  max-height: calc(100% - 40px);
-  overflow-y: auto;
-  max-width: 80%;
-  max-height: 100%;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto; /* Enable scrolling if content exceeds modal size */
+  border-radius: 10px;
 }
-.modal .modal-content .modal-header {
+
+.modal-header {
   display: flex;
   justify-content: flex-end;
 }
-.modal .modal-content .modal-body {
+
+.modal-body {
   display: flex;
   flex-wrap: wrap;
 }
 
+.modal-body img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+
 .close {
   cursor: pointer;
+  padding: 4px;
 }
 
 main .greeting {

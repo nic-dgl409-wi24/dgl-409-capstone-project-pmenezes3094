@@ -22,11 +22,11 @@ $stmt->bindParam(':user_password', $user_password, PDO::PARAM_STR);
 // Execute the SQL statement
 if ($stmt->execute()) {
     // Redirect to the login form after successful registration
-    redirectWithMessage("User registered successfully.", "../../front-end/pages/login-form.php");
+    redirectWithMessage("User registered successfully.", "../../front-end/pages/login-view.php");
 } else {
     // Display an error message if registration fails
     $errorInfo = $stmt->errorInfo();
-    redirectWithMessage("Error: " . $errorInfo[2], "../../front-end/pages/registration-form.php");
+    redirectWithMessage("Error: " . $errorInfo[2], "../../front-end/pages/register-view.php");
 }
 
 // Function to redirect with a JavaScript alert message

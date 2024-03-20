@@ -10,9 +10,6 @@
                 <button class="search button-icon">
                     <img src="../assets/icons/search.svg" alt="">
                 </button>
-                <button class="setting button-icon">
-                    <img src="../assets/icons/setting.svg" alt="">
-                </button>
                 <button class="logout button-icon" onclick="logout()">
                     <img src="../assets/icons/logout.svg" alt="">
                 </button>

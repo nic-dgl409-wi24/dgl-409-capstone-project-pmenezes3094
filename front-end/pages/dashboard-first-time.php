@@ -10,7 +10,7 @@
                     <p>Looks like <span class="emphasize">there are no memories stored</span>,
                         which means no treasures to uncover. </p>
                     <p>Let's change that</p>
-                    <button class="button-primary">Record a thought now</button>
+                    <button class="add button-primary" onclick="openAddBar()">Record a thought now</button>
                 </div>
             </div>
         </div>

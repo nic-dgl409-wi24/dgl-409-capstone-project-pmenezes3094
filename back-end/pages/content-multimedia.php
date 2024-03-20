@@ -66,7 +66,6 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
         $data_type = determineDataType(strtolower($file_extension));
 
         if (insertData($user_id, $data_type, $filepath, $data_tag)) {
-            // redirectWithMessage("File uploaded successfully.", $_SERVER['HTTP_REFERER']);
             redirectWithMessage("File uploaded successfully.", "reload.php");
         } else {
             redirectWithMessage("Error inserting data into the database.", "error_redirect_location.php");
@@ -74,9 +73,24 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
     } else {
         redirectWithMessage("File could not be uploaded. Please try again.", $_SERVER['HTTP_REFERER']);
     }
+} else if (isset($_FILES['audio']) && $_FILES['audio']['error'] === 0) {
+    $audioPath = uploadFile($_FILES['audio']);
+
+    if ($audioPath !== false) {
+        $file_extension = pathinfo($_FILES['audio']['name'], PATHINFO_EXTENSION);
+        $data_type = determineDataType(strtolower($file_extension));
+
+        if (insertData($user_id, $data_type, $audioPath, $data_tag)) {
+            redirectWithMessage("Audio uploaded successfully.", "reload.php");
+        } else {
+            redirectWithMessage("Error inserting audio data into the database.", "error_redirect_location.php");
+        }
+    } else {
+        redirectWithMessage("Audio file could not be uploaded. Please try again.", $_SERVER['HTTP_REFERER']);
+    }
 } else {
     // Handle file upload errors
-    redirectWithMessage("Image could not be uploaded.", $_SERVER['HTTP_REFERER']);
+    redirectWithMessage("File could not be uploaded.", $_SERVER['HTTP_REFERER']);
 }
 
 // Function to redirect with a JavaScript alert message

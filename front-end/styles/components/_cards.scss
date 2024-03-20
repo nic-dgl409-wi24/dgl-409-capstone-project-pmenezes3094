@@ -15,8 +15,7 @@
             width: 100%;
             padding: $gap;
             img {
-                max-width: 100%;
-                height: auto;
+                height: 100%;
                 display: block;
                 margin: 0 auto;
             }
@@ -35,6 +34,11 @@
 
         .card-content {
             display:none;
+            position: absolute;
+    top: 0;
+    left:20px;
+    background-color: white;
+    z-index: 1;
 
             .card-buttons{
                 display: flex;

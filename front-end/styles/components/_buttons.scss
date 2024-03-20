@@ -4,23 +4,31 @@
     @include background-transparent;
 
     img {
-        width: 100%;
-        height: 100%;
+        width: 20px;
+        height: 20px;
         object-fit: contain;
     }
 }
 
 .button-icon {
     @include button-icon;
+    &:hover {
+        background-color: $color-secondary-dark-version;
+        border-radius: 20px;
+    }
 }
 
 .button-primary {
-    height: 50px;
+    height: 40px;
     max-width: 228px;
     border: none;
     border-radius: $corner-radius;
     background-color: $color-secondary-dark-version;
     color: $color-primary-dark-version;
+    &:hover {
+        border: 1px solid $color-secondary-dark-version;
+        background-color: transparent;
+    }
 }
 
 .button-active {
@@ -29,4 +37,16 @@
 
 .button-hover {
     @include button-icon;
+    &:hover {
+        background-color: $color-secondary-dark-version;
+        border-radius: 20px;
+    }
+}
+
+.button-text {
+    background-color: transparent;
+    color: $color-secondary-dark-version;
+    border: none;
+    max-width: 228px;
+    text-align: left;
 }

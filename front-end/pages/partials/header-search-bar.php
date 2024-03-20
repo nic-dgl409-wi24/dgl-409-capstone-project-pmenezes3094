@@ -1,5 +1,5 @@
 
-    <div class="search-bar">
+<div class="search-bar">
     <div class="container-search-bar">
         <div class="content-search-bar">
         <h2>Search</h2>
@@ -11,6 +11,5 @@
                     </div>
                 </form>
         </div>
-
     </div>
 </div>

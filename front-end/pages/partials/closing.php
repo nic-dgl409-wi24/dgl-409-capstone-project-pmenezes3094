@@ -1,3 +1,3 @@
-<script src="../scripts/script.js"></script>
+<?php require 'scripts.php'; ?>
 </body>
 </html>
