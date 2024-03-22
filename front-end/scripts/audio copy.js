@@ -1,7 +1,6 @@
 const recordButton = document.getElementById('recordButton');
 const audioPlayer = document.getElementById('audioPlayer');
 const downloadButton = document.getElementById('downloadButton');
-const audioDataInput = document.getElementById('audioData');
 let mediaRecorder;
 let chunks = [];
 let stream;
@@ -17,12 +16,6 @@ async function startRecording() {
 
         mediaRecorder.onstop = () => {
             const blob = new Blob(chunks, { type: 'audio/wav' });
-            const reader = new FileReader();
-            reader.onload = () => {
-                const base64Data = reader.result.split(',')[1]; // Extract base64 data
-                audioDataInput.value = base64Data; // Set the value of the hidden input field
-            };
-            reader.readAsDataURL(blob); // Read blob as data URL
             const url = URL.createObjectURL(blob);
             audioPlayer.src = url;
             stream.getTracks().forEach(track => track.stop()); // Stop the media stream
@@ -42,6 +35,8 @@ async function startRecording() {
 }
 
 function stopRecording() {
+    console.log("Stop recording function called.");
+    console.log("Media Recorder state:", mediaRecorder.state);
     if (mediaRecorder && mediaRecorder.state === 'recording') {
         mediaRecorder.stop();
         recordButton.textContent = 'Start Recording';

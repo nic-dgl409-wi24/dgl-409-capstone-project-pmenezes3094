@@ -27,27 +27,13 @@
                 <button type="submit" class="button-primary">Save</button>
                 <!-- Button for auto-detect content -->
             </form>
-            <form id="form-record" action="../../back-end/pages/content-audio.php" method="POST" enctype="multipart/form-data">
-                <!-- <div class="formfield-group">
+            <form id="form-record" action="../../back-end/pages/content-multimedia.php" method="POST" enctype="multipart/form-data">
+                <div class="formfield-group">
                     <button type="button" id="recordButton">Start Recording</button>
                     <audio id="audioPlayer" controls></audio>
                     <a id="downloadButton" style="display: none;">Download Recorded Audio</a>
                 </div>
-
-                
-                <button type="submit" class="button-primary">Save</button> -->
-
-                <label for="audio">Recorded Audio:</label><br>
-                <audio controls id="audioPlayer">
-                    Your browser does not support the audio element.
-                </audio><br>
-                <button type="button" id="recordButton">Start Recording</button>
-                <a id="downloadButton" style="display: none;">Download</a><br><br>
-                <button type="submit">Submit</button>
-                <input type="hidden" name="data_tag" id="dataTag" value="General">
-
-                <!-- Hidden input field to store the base64-encoded audio data -->
-                <input type="hidden" id="audioData" name="audioData">
+                <button type="submit" class="button-primary">Save</button>
             </form>
             <!-- Buttons to toggle forms -->
             <div class="add-data">
